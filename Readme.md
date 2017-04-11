@@ -1,6 +1,6 @@
 # Личный проект «Девайс»
 
-* Студент: [Дмитрий Нилов](https://up.htmlacademy.ru/htmlcss/17/user/133956).
+* Студент: [Дмитрий Нилов (jeffent)](https://up.htmlacademy.ru/htmlcss/17/user/133956).
 * Наставник: [Александр Секунов] (https://htmlacademy.ru/profile/id399815).
 
 ---
