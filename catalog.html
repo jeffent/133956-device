@@ -91,18 +91,60 @@
             <form action="">
               <fieldset>
                 <legend>Стоимость</legend>
+                <div class="price-slider">
+                  <div class="slider-track">
+                    <div class="slider-selection"></div>
+                    <div class="slider-handle"></div>
+                    <div class="slider-handle"></div>
+                  </div>
+                </div>
               </fieldset>
               <fieldset>
                 <legend>Цвет</legend>
-
+                <label for="black"><input type="checkbox" name="color" id="black"><span class="checkbox"></span>Черный</label>
+                <label for="white"><input type="checkbox" name="color" id="white"><span class="checkbox"></span>Белый</label>
+                <label for="blue"><input type="checkbox" name="color" id="blue"><span class="checkbox"></span>Голубой</label>
+                <label for="red"><input type="checkbox" name="color" id="red"><span class="checkbox"></span>Красный</label>
+                <label for="pink"><input type="checkbox" name="color" id="pink"><span class="checkbox"></span>Розовый</label>
               </fieldset>
               <fieldset>
                 <legend>Bluetooth</legend>
+                <label for="yes"><input id="yes" name="question" type="radio"><span class="radio"></span>Есть</label>
+                <label for="no"><input id="no" name="question" type="radio"><span class="radio"></span>Нет</label>
               </fieldset>
+              <input class="btn" type="submit" value="Показать">
             </form>
           </div>
           <div class="catalog-table-right">
-
+            <article class="catalog-item">
+              <figure><img src="http://placehold.it/360x390" alt=""></figure>
+              <a class="catalog-item-title" href="#">Любительская селфи-палка</a>
+              <a class="catalog-item-price" href="#">500 руб.</a>
+            </article>
+            <article class="catalog-item">
+              <figure><img src="http://placehold.it/360x390" alt=""></figure>
+              <a class="catalog-item-title" href="#">Профессиональная селфи-палка</a>
+              <a class="catalog-item-price" href="#">1 500 руб.</a>
+            </article>
+            <article class="catalog-item">
+              <figure><img src="http://placehold.it/360x390" alt=""></figure>
+              <a class="catalog-item-title" href="#">Непотопляемая селфи-палка</a>
+              <a class="catalog-item-price" href="#">2 500 руб.</a>
+            </article>
+            <article class="catalog-item">
+              <figure><img src="http://placehold.it/360x390" alt=""></figure>
+              <a class="catalog-item-title" href="#">Селфи-палка «Следуй за мной»</a>
+              <a class="catalog-item-price" href="#">4 900 руб.</a>
+            </article>
+            <div class="catalog-nav">
+              <a href="#" class="btn prev">назад</a>
+              <ul class="catalog-nav-numb">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+              <a href="#" class="btn next">вперед</a>
+            </div>
           </div>
         </div>
       </div>
