@@ -1,0 +1,180 @@
+/*GLOBAL*/
+@font-face {
+  font-family: 'Gilroy Extra Bold';
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+       url('../fonts/gilroyextrabold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../fonts/opensanslight.woff2') format('woff2'),
+       url('../fonts/opensanslight.woff') format('woff')
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*HRADER*/
+.header {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 34px;
+  background: rgb(247, 226, 150);
+}
+.index-logo h1{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy Extra Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 0;
+  top: 0;
+  left: 60px;
+}
+.index-logo>h1>a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.index-logo>h1>a:hover {
+  color: rgba(0, 0, 0, .6);
+}
+.index-logo>h1>a:active {
+  color: rgba(0, 0, 0, .3);
+}
+.header-userblock {
+  font-family: 'Open Sans Light', sans-serif;
+  font-size: 0;
+  line-height: 0;
+}
+.header-find {
+  float: left;
+  width: 440px;
+  margin-left: 60px;
+  margin-right: 100px;
+  background-color: rgb(247, 226, 150);
+}
+input.header-find-text {
+  width: 272px;
+  font-family: 'Open Sans Light', sans-serif;
+  font-size: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  line-height: 45px;
+  border: 0 none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background: url(http://placehold.it/16x16) no-repeat 3px center;
+}
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, .3);
+}
+input:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, .6);
+}
+.header-find-btn {
+  font-family: 'Open Sans Light', sans-serif;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  line-height: 45px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: inherit;
+}
+.header-login {
+  float: left;
+  width: 260px;
+  margin-right: 20px;
+}
+.login {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 11px;
+  width: 16px;
+  height: 16px;
+  background: url(http://placehold.it/16x16) no-repeat center;
+}
+.header-userblock a {
+  font-family: 'Open Sans Light', sans-serif;
+  font-size: 15px;
+  line-height: 45px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.header-userblock a:hover {
+  color: rgba(0, 0, 0, .6);
+}
+.header-userblock a:hover span{
+  opacity: 0.6;
+}
+.header-userblock a:active {
+  color: rgba(0, 0, 0, .3);
+}
+.header-userblock a:active span{
+  opacity: 0.3;
+}
+.header-basket {
+  float: left;
+  width: 220px;
+  margin-right: 60px;
+  /*background: red;*/
+}
+.compare {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 11px;
+  width: 16px;
+  height: 16px;
+  background: url(http://placehold.it/16x16) no-repeat center;
+}
+.basket {
+  display: inline-block;
+  margin-left: 35px;
+  margin-right: 11px;
+  width: 16px;
+  height: 16px;
+  background: url(http://placehold.it/16x16) no-repeat center;
+}
+.main-menu{
+  position: relative;
+}
+  .main-submenu {
+    position: absolute;
+  }
+.main-menu,
+.main-submenu,
+[class^=catalog-]{
+  list-style: none;
+}
+.main-menu>li{
+  display: inline-block;
+}
+#products:checked ~ .main-submenu{
+  display: none;
+}
+.main-menu a {
+  font-family: 'Gilroy Extra Bold', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+/*INDEX.HTML*/

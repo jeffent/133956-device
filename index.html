@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="DEVICE - интернет-магазин гаджетов и аксессуаров">
+  <meta name="keywords" content="аксессуары, гаджеты, мобильный">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 <body>
-  <header>
-    <div class="container">
+  <div class="container">
+  <header class="header">
       <div class="index-logo">
-        <img src="http://placehold.it/168x53" alt="device">
+        <h1><a href="#">Device</a></h1>
       </div>
-      <div class="header-find">
-        <form action="">
-          <input type="submit" value="Поиск">
-          <input type="search" name="search" placeholder="Поиск по сайту">
-        </form>
+      <div class="header-userblock clearfix">
+        <div class="header-find">
+          <form action="#">
+            <input class="header-find-text" type="text" name="search" placeholder="Поиск по сайту">
+            <input class="header-find-btn" type="submit" value="Найти">
+          </form>
+        </div>
+        <div class="header-login">
+          <a class="link-btn" href="#"><span class="login"></span>Войти</a>
+        </div>
+        <div class="header-basket">
+          <a class="link-btn" href="#"><span class="compare"></span>Сравнить</a>
+          <a class="link-btn" href="#"><span class="basket"></span>Корзина</a>
+        </div>
       </div>
-      <div class="header-userblock">
-        <a class="login" href="#">Войти</a>
-      </div>
-      <div class="header-basket">
-        <a class="compare" href="#">Сравнить</a>
-        <a class="basket" href="#">Корзина</a>
-      </div>
-    </div>
-    <nav class="main-menu">
-      <ul>
-        <li><a class="main-menu-catalog" href="">Каталог товаров</a>
-          <ul>
+    <nav>
+      <ul class="main-menu">
+        <li>
+         <input class="catalog-products" id="products" type="checkbox">
+         <label for="products">К65аталог товаров</label>
+          <ul class="main-submenu">
             <li>
               <ul class="catalog-1">
                 <li><a href="#">Виртуальная реальность</a></li>
@@ -48,7 +55,7 @@
                   <li><a href="#">Квадрокоптеры</a></li>
                 </ul>
             </li>
-          </ul>             
+          </ul>
         </li>
         <li><a class="main-menu-delivery" href="">Доставка</a></li>
         <li><a class="main-menu-guarantee" href="">Гарантия</a></li>
@@ -61,16 +68,12 @@
           <img src="http://placehold.it/384x486" alt="">
         </figure>
         <article class="slider-info">
-          <header>
-            <h1 class="slider-title">
-              Делай селфи, как Бен Стиллер!
-            </h1>
-          </header>
+            <b class="slider-title">Делай селфи, как Бен Стиллер!</b>
           <p class="slider-text">
             Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
-          <a href="#" class="btn" alt="Подробнее">Подробнее</a>
-          <footer class="slider-spec">
+          <a href="#" class="btn">Подробнее</a>
+          <aside class="slider-spec">
             <section class="spec-item">
               <p class="spec-item-value">8,5 м</p>
               <p class="spec-item-info">Длина палки</p>
@@ -83,7 +86,7 @@
               <p class="spec-item-value">Карбон</p>
               <p class="spec-item-info">Материал</p>
             </section>
-          </footer>
+          </aside>
         </article>
       </div>
       <div id="slider-content-2">
@@ -91,21 +94,17 @@
           <img src="http://placehold.it/345x485" alt="">
         </figure>
         <article class="slider-info">
-          <header>
-            <h1 class="slider-title">
-              Худеем правильно!
-            </h1>
-          </header>
+            <b class="slider-title">Худеем правильно!</b>
           <p class="slider-text">
             Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
-          <a href="#" class="btn" alt="Подробнее">Подробнее</a>
-          <footer class="slider-spec">
+          <a href="#" class="btn">Подробнее</a>
+          <aside class="slider-spec">
             <section class="spec-item">
               <p class="spec-item-value">48 часов</p>
               <p class="spec-item-info">Без подзарядки</p>
             </section>
-          </footer>
+          </aside>
         </article>
       </div>
       <div id="slider-content-3">
@@ -113,16 +112,12 @@
           <img src="http://placehold.it/526x334" alt="">
         </figure>
         <article class="slider-info">
-          <header>
-            <h1 class="slider-title">
-              Порхает как бабочка, жалит как пчела!
-            </h1>
-          </header>
+            <b class="slider-title">Порхает как бабочка, жалит как пчела!</b>
           <p class="slider-text">
             Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
-          <a href="#" class="btn" alt="Подробнее">Подробнее</a>
-          <footer class="slider-spec">
+          <a href="#" class="btn">Подробнее</a>
+          <aside class="slider-spec">
             <section class="spec-item">
               <p class="spec-item-value">800 м</p>
               <p class="spec-item-info">Дальность полета</p>
@@ -131,11 +126,9 @@
               <p class="spec-item-value">50 м</p>
               <p class="spec-item-info">Радиус поражения</p>
             </section>
-          </footer>
+          </aside>
         </article>
       </div>
-      <div id="slider-content-2"></div>
-      <div id="slider-content-3"></div>
     </div>
     <div class="slider-nav">
       <label for="swith-1"></label>
@@ -146,6 +139,7 @@
       <input id="swith-3" name="slider" type="radio">
     </div>
   </header>
+  </div>
   <main>
     <div class="container">
       <div class="products">
@@ -227,8 +221,8 @@
             <li>Деловые Линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
-            <a href="#" class="btn">Подробнее о нас</a>
           </ul>
+          <a href="#" class="btn">Подробнее о нас</a>
         </div>
         <div class="main-info-contacts">
           <b class="main-info-title">Контакты</b>
