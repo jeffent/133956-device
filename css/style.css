@@ -346,6 +346,8 @@ input.header-find-text:focus ~ input.header-find-btn {
 }
 .block-slider {
   position: relative;
+  float: left;
+  margin-top: 20px;
   /*margin-top: 170px;*/
 }
 .block-slider input {
@@ -386,7 +388,7 @@ input.header-find-text:focus ~ input.header-find-btn {
 .slider-info {
   float: right;
   width: 500px;
-  margin-right: 60px;
+  margin-right: 65px;
   padding-top: 44px;
 }
 .slider-title::before {
