@@ -1,0 +1,239 @@
+section, article - не везде верное применение, почитать вот это:
+http://blog.brainf.net/other/kak-ispolzovat-sekcionnye-ehlementy-html5/
+http://front-end.su/2015/11/01/div-or-section-or-article/
+или спецификацию или какие другие полезные материалы
+
+<!-- <p class="footer-address">г. Москва, ул. Строителей, 15</p> - можно заменить на тег <address> -->
+
+<!-- <ul class="footer-nav">
+  <li>Доставка</li>
+  <li>Гарантия</li>
+  <li>Контакты</li>
+</ul>
+Здесь должны еще быть ссылки -->
+
+<ul class="footer-social">
+  <li><a href="#" class="footer-social-facebook">facebook</a></li>
+  <li><a href="#" class="footer-social-instagram">instagram</a></li>
+  <li><a href="#" class="footer-social-twitter">twitter</a></li>
+</ul>
+Здесь лучше не картинки, а бекгнаунд и спрайт
+
+Левый и правый блоки для контента не совсем верно, поясняю:
+Левый блок и его шапка (Фильты) и правый блок и его шапка (сортировка)
+
+<label for="black"><input type="checkbox" name="color" id="black"><span class="checkbox"></span>Черный</label>
+Излишне
+или так: <label for"black">blablabla</label><input id="black">
+или так: <label><input></label>
+Т.е. если инпут внутри лейбла то привязка по for уже не нужна и так будет работать.
+
+<input class="btn" type="submit" value="Показать"> - чтобы этот тег стилизовать так как на макете нужна будет обертка, лучше использовать <button type="submit">
+
+<article class="catalog-item">
+  <figure><img src="http://placehold.it/360x390" alt=""></figure>
+  <a class="catalog-item-title" href="#">Любительская селфи-палка</a>
+  <a class="catalog-item-price" href="#">500 руб.</a>
+</article>
+Это можно сделать вот так, чтобы не городить кучу одинаковых ссылок:
+<a href="">
+<article class="catalog-item">
+  <figure><img src="http://placehold.it/360x390" alt=""></figure>
+  <p class="catalog-item-title">Любительская селфи-палка</p>
+  <span class="catalog-item-price">500 руб.</span>
+</article>
+</a>
+Или же спан засунуть внутрь параграфа, как больше нравится
+
+Для <article> c товаром я бы для всех их создал бы отдельную обертку а навигацию бы вынес под нее
+
+<div class="catalog-nav">
+  <a href="#" class="btn prev">назад</a>
+  <ul class="catalog-nav-numb">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+  </ul>
+  <a href="#" class="btn next">вперед</a>
+</div>
+Это лучше сделать вот так:
+<nav class="catalog-nav">
+  <ul class="catalog-nav-numb">
+    <li><a href="#" class="btn prev">назад</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#" class="btn next">вперед</a></li>
+  </ul>
+</nav>
+
+И последнее в каталоге
+<nav class="main-menu">
+  <ul>
+    <li><a class="main-menu-catalog" href="">Каталог товаров</a>
+      <ul>
+        <li>
+          <ul class="catalog-1">
+            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="#">Моноподы для селфи</a></li>
+            <li><a href="#">Экшн-камеры</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="catalog-2">
+            <li><a href="#">Фитнес-браслеты</a></li>
+            <li><a href="#">Умные часы</a></li>
+          </ul>
+        </li>
+        <li>
+            <ul class="catalog-3">
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a class="main-menu-delivery" href="">Доставка</a></li>
+    <li><a class="main-menu-guarantee" href="">Гарантия</a></li>
+    <li><a class="main-menu-contacts" href="">Контакты</a></li>
+  </ul>
+</nav>
+Вот это мне не очень нравится я не вижу необходимости разбивать меню второго уровня на разные списки
+<nav class="main-menu">
+  <ul>
+    <li><a class="main-menu-catalog" href="">Каталог товаров</a>
+      <ul>
+        <li><a href="#">Виртуальная реальность</a></li>
+        <li><a href="#">Моноподы для селфи</a></li>
+        <li><a href="#">Экшн-камеры</a></li>
+        <li><a href="#">Фитнес-браслеты</a></li>
+        <li><a href="#">Умные часы</a></li>
+        <li><a href="#">Квадрокоптеры</a></li>
+      </ul>
+    </li>
+    <li><a class="main-menu-delivery" href="">Доставка</a></li>
+    <li><a class="main-menu-guarantee" href="">Гарантия</a></li>
+    <li><a class="main-menu-contacts" href="">Контакты</a></li>
+  </ul>
+</nav>
+Но даже наверное здесь нет этого второго уровня - это отдельный блок
+<nav class="main-menu">
+  <ul>
+    <li><a class="main-menu-catalog" href="">Каталог товаров</a></li>
+    <li><a class="main-menu-delivery" href="">Доставка</a></li>
+    <li><a class="main-menu-guarantee" href="">Гарантия</a></li>
+    <li><a class="main-menu-contacts" href="">Контакты</a></li>
+  </ul>
+</nav>
+<nav class="catalog">
+  <ul>
+    <li><a href="#">Виртуальная реальность</a></li>
+    <li><a href="#">Моноподы для селфи</a></li>
+    <li><a href="#">Экшн-камеры</a></li>
+    <li><a href="#">Фитнес-браслеты</a></li>
+    <li><a href="#">Умные часы</a></li>
+    <li><a href="#">Квадрокоптеры</a></li>
+  </ul>
+</nav>
+
+
+
+------------------------------------------------------
+Index
+------------------------------------------------------
+
+<div class="brands">
+  <div class="container">
+    <figure class="brand-item"><img src="http://placehold.it/260x100" alt=""></figure>
+    <figure class="brand-item"><img src="http://placehold.it/260x100" alt=""></figure>
+    <figure class="brand-item"><img src="http://placehold.it/260x100" alt=""></figure>
+    <figure class="brand-item"><img src="http://placehold.it/260x100" alt=""></figure>
+  </div>
+</div>
+Все же это должен быть список с сылкой, так как у тебя тоже можно но ссылка нужна
+<div class="brands">
+  <div class="container">
+    <ul>
+      <li><a href="#"><img src=""></a></li>
+      <li><a href="#"><img src=""></a></li>
+      <li><a href="#"><img src=""></a></li>
+      <li><a href="#"><img src=""></a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="main-info">
+  <div class="container">
+    <div class="main-info-about">
+      <b class="main-info-title">О нас</b>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+      <ul>
+        <li>Деловые Линии</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+        <a href="#" class="btn">Подробнее о нас</a>
+      </ul>
+    </div>
+    <div class="main-info-contacts">
+      <b class="main-info-title">Контакты</b>
+      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+      <figure>
+        <img src="http://placehold.it/560x222" alt="Карта">
+      </figure>
+      <a href="#" class="btn">Напишите нам</a>
+    </div>
+  </div>
+</div>
+Вот хороших блок для <article> и <section>. Section - мог бы быть оберкой всего блока - main-info, но так как в других местах нет его тогда для последовательности и здесь не будет менять див на него.
+<div class="main-info">
+  <div class="container">
+    <article class="main-info-about">
+      <h2 class="main-info-title">О нас</h2>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+      <ul>
+        <li>Деловые Линии</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a href="#" class="btn">Подробнее о нас</a> <!--здесть ссылку вынес из списка, наверное у тебя опечатка по невнимательности-->
+    </article>
+    <article class="main-info-contacts">
+      <h2 class="main-info-title">Контакты</h2>
+      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+      <figure>
+        <img src="http://placehold.it/560x222" alt="Карта">
+      </figure>
+      <a href="#" class="btn">Напишите нам</a>
+    </article>
+  </div>
+</div>
+
+.services - разметка не верная, если идея была по клику на элемент слева чтобы открывалась область справа, тогда реализация такая - слева лейбл справа в оберкте инпук к которому привязан лейбл через for и id
+пример:
+div.left
+  label
+
+div.right
+  div.item
+    input
+    div.item-content
+
+input:checked ~ item-content {display: block;}
+Вот пример реализации
+
+Картинка человечка в блоке сервисов все же яляется на мой взгляд не контентом, а интерфейсом, а значит - бекграунд
+
+Продукты - это список, картинки - интерфейс, бекграунд, ul>li>a
+<a href="#" class="products-item">
+  <img src="http://placehold.it/160x160" alt="">
+  <h2>Виртуальная реальность</h2>
+</a>
+Будет по другому, как-то вот так:
+<li href="#" class="products-item">
+  <a href="#">
+    div.picture
+    p.desctiption или <b> или <span> но не думаю, что заголовок
+  </a>
+</li>
