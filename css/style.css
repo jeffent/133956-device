@@ -31,7 +31,7 @@ body {
 }
 body {
   position: relative;
-  min-width: 1160px;
+  min-width: 1200px;
 }
 .container {
   min-width: 750px;
@@ -59,6 +59,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #000;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: #f0c52e;
@@ -88,7 +89,7 @@ body {
   margin-top: 35px;
 }
 .header-userblock a {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 100;
   font-size: 15px;
   line-height: 45px;
@@ -116,7 +117,7 @@ body {
 }
 .header-find-text {
   width: 120px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 15px;
   padding-top: 0;
@@ -145,7 +146,7 @@ input.header-find-text:focus::-webkit-input-placeholder {
   position: absolute;
   left: 180px;
   top: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   padding-top: 0;
   padding-bottom: 0;
@@ -258,7 +259,7 @@ input.header-find-text:focus ~ input.header-find-btn {
   height: 16px;
 }
 .login-user {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 100;
   color: #000;
   margin-right: 20px;
@@ -725,9 +726,9 @@ main {
   filter: grayscale(0);
   opacity: 1;
 }
-.map {
-  display: inline-block;
-  border-bottom: 70px;
+.map-img {
+  display: block;
+  margin-bottom: 72px;
 }
 .main-info-column {
   float: left;
@@ -1303,8 +1304,8 @@ footer {
 }
 .product-catalog {
   display: flex;
-  margin-left: 72px;
-  margin-top: 55px;
+  margin-left: 55px;
+  margin-top: 67px;
   width: 797px;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -1404,6 +1405,7 @@ footer {
 .catalog-nav-inner{
   display: inline-block;
   width: 760px;
+  margin-bottom: 40px;
 }
 .catalog-nav-numb {
   display: flex;
@@ -1463,6 +1465,7 @@ footer {
   line-height: 70px;
   text-transform: uppercase;
   color: #000;
+  letter-spacing: 3px;
 }
 .form-login {
   position: fixed;
