@@ -483,30 +483,30 @@ li.main-menu-group:hover a ~ .main-submenu{
 .slider-controls li label:active {
   opacity: 1;
 }
-#swith-1:checked ~ .slider-controls>li:nth-child(1)>label{
+.swith-1:checked ~ .slider-controls>li:nth-child(1)>label{
   opacity: 1;
 }
-#swith-2:checked ~ .slider-controls>li:nth-child(2)>label{
+.swith-2:checked ~ .slider-controls>li:nth-child(2)>label{
   opacity: 1;
 }
-#swith-3:checked ~ .slider-controls>li:nth-child(3)>label{
+.swith-3:checked ~ .slider-controls>li:nth-child(3)>label{
   opacity: 1;
 }
-#swith-1:checked ~ .main-slider>.slider-content-1 {
+.swith-1:checked ~ .main-slider>.slider-content-1 {
   display: block;
   animation-name: slider;
   animation-duration: .5s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
-#swith-2:checked ~ .main-slider>.slider-content-2 {
+.swith-2:checked ~ .main-slider>.slider-content-2 {
   display: block;
   animation-name: slider;
   animation-duration: .5s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
-#swith-3:checked ~ .main-slider>.slider-content-3 {
+.swith-3:checked ~ .main-slider>.slider-content-3 {
   display: block;
   animation-name: slider;
   animation-duration: .5s;
@@ -655,42 +655,42 @@ main {
     width: 120px;
   }
 }
-#services-item-1:checked ~ .services-nav>li:nth-child(1)>.btn-services {
+.services-item-1:checked ~ .services-nav>li:nth-child(1)>.btn-services {
   color: #f7e184;
   background: #000;
 }
-#services-item-1:checked ~ .services-nav>li:nth-child(1)>.btn-services:after {
+.services-item-1:checked ~ .services-nav>li:nth-child(1)>.btn-services:after {
   width: 120px;
 }
-#services-item-2:checked ~ .services-nav>li:nth-child(2)>.btn-services {
+.services-item-2:checked ~ .services-nav>li:nth-child(2)>.btn-services {
   color: #f7e184;
   background: #000;
 }
-#services-item-2:checked ~ .services-nav>li:nth-child(2)>.btn-services:after {
+.services-item-2:checked ~ .services-nav>li:nth-child(2)>.btn-services:after {
   width: 120px;
 }
-#services-item-3:checked ~ .services-nav>li:nth-child(3)>.btn-services {
+.services-item-3:checked ~ .services-nav>li:nth-child(3)>.btn-services {
   color: #f7e184;
   background: #000;
 }
-#services-item-3:checked ~ .services-nav>li:nth-child(3)>.btn-services:after {
+.services-item-3:checked ~ .services-nav>li:nth-child(3)>.btn-services:after {
   width: 120px;
 }
-#services-item-1:checked ~ .services-info>.services-1 {
+.services-item-1:checked ~ .services-info>.services-1 {
   display: block;
   animation-name: slider;
   animation-duration: 1s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
-#services-item-2:checked ~ .services-info>.services-2 {
+.services-item-2:checked ~ .services-info>.services-2 {
   display: block;
   animation-name: slider;
   animation-duration: 1s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
-#services-item-3:checked ~ .services-info>.services-3 {
+.services-item-3:checked ~ .services-info>.services-3 {
   display: block;
   animation-name: slider;
   animation-duration: 1s;
