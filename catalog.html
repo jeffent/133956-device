@@ -18,7 +18,7 @@
       </div>
       <section class="header-userblock clearfix">
         <form class="header-find" action="#">
-            <input class="header-find-text" type="text" name="search" placeholder="Поиск по сайту">
+            <input class="header-find-text" type="search" name="search" placeholder="Поиск по сайту">
             <label class="header-find-item"></label>
             <input class="header-find-btn" type="submit" value="Найти">
         </form>
@@ -79,46 +79,52 @@
       <section class="filter col-left">
         <div class="catalog-table-left">
           <form action="">
-            <fieldset>
-              <legend>Стоимость</legend>
-              <div class="price-controls">
-        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-        <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
-      </div>
-      <div class="range-controls">
-        <div class="scale">
-          <div class="bar"></div>
-        </div>
-        <div class="range-toggle range-toggle-min"></div>
-        <div class="range-toggle range-toggle-max"></div>
-      </div>
-
-
-
-
-
-              <div class="price-slider">
-                <div class="slider-track">
-                  <div class="slider-selection"></div>
-                  <div class="slider-handle"></div>
-                  <div class="slider-handle"></div>
+            <fieldset class="filter-title">
+              <div class="filter-legend">Стоимость</div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min">
+                  <span class="min-price">0</span>
+                </div>
+                <div class="range-toggle range-toggle-max">
+                  <span class="max-price">5000</span>
                 </div>
               </div>
             </fieldset>
-            <fieldset>
-              <legend>Цвет</legend>
-              <label for="black"><input type="checkbox" name="color" id="black"><span class="checkbox"></span>Черный</label>
-              <label for="white"><input type="checkbox" name="color" id="white"><span class="checkbox"></span>Белый</label>
-              <label for="blue"><input type="checkbox" name="color" id="blue"><span class="checkbox"></span>Голубой</label>
-              <label for="red"><input type="checkbox" name="color" id="red"><span class="checkbox"></span>Красный</label>
-              <label for="pink"><input type="checkbox" name="color" id="pink"><span class="checkbox"></span>Розовый</label>
+            <fieldset class="filter-title">
+              <div class="filter-legend">Цвет</div>
+                <ul class="color-check">
+                  <li>
+                    <label class="color-check-item" for="black"><input type="checkbox" name="color" id="black"><span class="color-check-indicator"></span>Черный</label>
+                  </li>
+                  <li>
+                    <label class="color-check-item" for="white"><input type="checkbox" name="color" id="white"><span class="color-check-indicator"></span>Белый</label>
+                  </li>
+                  <li>
+                    <label class="color-check-item" for="blue"><input type="checkbox" name="color" id="blue"><span class="color-check-indicator"></span>Синий</label>
+                  </li>
+                  <li>
+                    <label class="color-check-item" for="red"><input type="checkbox" name="color" id="red"><span class="color-check-indicator"></span>Красный</label>
+                  </li>
+                  <li>
+                    <label class="color-check-item" for="pink"><input type="checkbox" name="color" id="pink"><span class="color-check-indicator"></span>Розовый</label>
+                  </li>
+                </ul>
             </fieldset>
-            <fieldset>
-              <legend>Bluetooth</legend>
-              <label for="yes"><input id="yes" name="question" type="radio"><span class="radio"></span>Есть</label>
-              <label for="no"><input id="no" name="question" type="radio"><span class="radio"></span>Нет</label>
+            <fieldset class="filter-title">
+              <div class="filter-legend">Bluetooth</div>
+              <ul class="color-check">
+                <li>
+                  <label class="color-check-item" for="yes"><input id="yes" name="question" type="radio"><span class="color-radio-indicator"></span>Есть</label>
+                </li>
+                <li>
+                  <label class="color-check-item" for="no"><input id="no" name="question" type="radio"><span class="color-radio-indicator"></span>Нет</label>
+                </li>
+              </ul>
             </fieldset>
-            <input class="btn" type="submit" value="Показать">
+            <input class="btn input-btn" type="submit" value="Показать">
           </form>
         </div>
       </section>
@@ -134,102 +140,80 @@
           <li><a><span class="rect-down"></span></a></li>
         </ul>
       </header>
-      <section class="catalog col-right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aliquid, repellat repellendus accusamus perspiciatis, rerum. Rem inventore iure eos neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est odit recusandae pariatur sit eos perspiciatis, incidunt distinctio corrupti id dolor impedit. Dignissimos voluptas quaerat voluptates ea dicta unde cumque repellat!</p>
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis maiores ipsam quidem aliquid architecto laborum hic eaque amet, iusto perspiciatis nemo ex quo, consequuntur earum dolore. Voluptatem possimus, ab beatae.f</div>
-        <div>Molestias, fuga, quod. Molestiae tempora, nulla! Omnis assumenda delectus ducimus, molestias asperiores corrupti amet tempore animi repudiandae repellendus accusantium itaque, facere. Quam voluptas saepe, voluptates nulla sunt, nam eveniet laborum!</div>
-      </section>
-    </section>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-
-    <div class="container">
-      <h1 class="main-title">Моноподы для селфи</h1>
-      <ul class="breadcrumbs">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Каталог товаров</a></li>
-        <li>Моноподы для селфи</li>
-      </ul>
-    </div>
-    <div class="catalog-table">
-      <div class="catalog-table-title">
-        <div class="container">
-          <div class="catalog-table-left">
-            <span>Фильтр:</span>
-          </div>
-          <div class="catalog-table-right">
-            <span>Сортировка</span>
-            <ul class="catalg-sort">
-              <li><a href="#">По цене</a></li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По популярности</a></li>
-            </ul>
-            <div class="catalog-arrows">
-              <a href="#">вверх</a>
-              <a href="#">вниз</a>
+      <section class="product-catalog">
+       <section class="product-catalog-item">
+          <div class="product-wrap-img">
+            <img class="product-catalog-img" src="img/item-1.png" width="360" height="380" alt="">
+            <div class="incart">
+              <div class="incart-content">
+                <div class="btn"><a href="#">Подробнее</a></div>
+                <a class="incart-compare" href="#">Добавить к сравнению</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="catalog-table">
-      <div class="catalog-table-title">
-        <div class="container">
-
-          <div class="catalog-table-right">
-            <article class="catalog-item">
-              <figure><img src="http://placehold.it/360x390" alt=""></figure>
-              <a class="catalog-item-title" href="#">Любительская селфи-палка</a>
-              <a class="catalog-item-price" href="#">500 руб.</a>
-            </article>
-            <article class="catalog-item">
-              <figure><img src="http://placehold.it/360x390" alt=""></figure>
-              <a class="catalog-item-title" href="#">Профессиональная селфи-палка</a>
-              <a class="catalog-item-price" href="#">1 500 руб.</a>
-            </article>
-            <article class="catalog-item">
-              <figure><img src="http://placehold.it/360x390" alt=""></figure>
-              <a class="catalog-item-title" href="#">Непотопляемая селфи-палка</a>
-              <a class="catalog-item-price" href="#">2 500 руб.</a>
-            </article>
-            <article class="catalog-item">
-              <figure><img src="http://placehold.it/360x390" alt=""></figure>
-              <a class="catalog-item-title" href="#">Селфи-палка «Следуй за мной»</a>
-              <a class="catalog-item-price" href="#">4 900 руб.</a>
-            </article>
-            <div class="catalog-nav">
-              <a href="#" class="btn prev">назад</a>
+          <div class="product-price">
+              <p class="product-price-name"><a href="">Любительская селфи-палка</a></p>
+            <span class="product-price-value"><a href="">500 руб.</a></span>
+            </div>
+        </section>
+        <section class="product-catalog-item">
+          <div class="product-wrap-img">
+            <img class="product-catalog-img" src="img/item-2.png" width="360" height="380" alt="">
+            <div class="incart">
+              <div class="incart-content">
+                <div class="btn"><a href="#">Подробнее</a></div>
+                <a class="incart-compare" href="#">Добавить к сравнению</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-price">
+              <p class="product-price-name"><a href="">Профессиональная <br>селфи-палка</a></p>
+            <span class="product-price-value"><a href="">1 500 руб.</a></span>
+            </div>
+        </section>
+        <section class="product-catalog-item">
+          <div class="product-wrap-img">
+            <img class="product-catalog-img" src="img/item-3.png" width="360" height="380" alt="">
+            <div class="incart">
+              <div class="incart-content">
+                <div class="btn"><a href="#">Подробнее</a></div>
+                <a class="incart-compare" href="#">Добавить к сравнению</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-price">
+              <p class="product-price-name"><a href="">Непотопляемая селфи-палка</a></p>
+            <span class="product-price-value"><a href="">2 500 руб.</a></span>
+            </div>
+        </section>
+        <section class="product-catalog-item new-item">
+          <div class="product-wrap-img">
+            <img class="product-catalog-img" src="img/item-4.png" width="360" height="380" alt="">
+            <div class="incart">
+              <div class="incart-content">
+                <div class="btn"><a href="#">Подробнее</a></div>
+                <a class="incart-compare" href="#">Добавить к сравнению</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-price">
+              <p class="product-price-name"><a href="">Селфи-палка «Следуй за <br>мной»</a></p>
+            <span class="product-price-value"><a href="">4 900 руб.</a></span>
+            </div>
+        </section>
+        <div class="catalog-nav-inner">
               <ul class="catalog-nav-numb">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
+                <li class="prev"><a href="#" class="catalog-btn active">назад</a></li>
+                <li class="btn-grow"></li>
+                <li><a class="catalog-btn selected">1</a></li>
+                <li><a href="#" class="catalog-btn numb">2</a></li>
+                <li><a href="#" class="catalog-btn numb">3</a></li>
+                <li class="btn-grow"></li>
+                <li class="next"><a href="#" class="catalog-btn">вперед</a></li>
               </ul>
-              <a href="#" class="btn next">вперед</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div> -->
+      </section>
+  </div>
   </main>
 </div>
   <footer class="clearfix">
@@ -319,5 +303,8 @@
       </section>
     </div>
   </footer>
+  <section class="form-login">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dignissimos, quasi obcaecati unde nesciunt molestiae corporis non hic minima, expedita ut perferendis fuga maxime error officiis repellat autem adipisci harum velit. Voluptatibus doloribus neque quibusdam aut ab, magni dolorem, deserunt tempora omnis iure praesentium pariatur voluptatum dicta. Ipsa, maxime, soluta.
+  </section>
 </body>
 </html>
