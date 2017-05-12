@@ -76,13 +76,12 @@ body {
 .index-logo {
   position: relative;
 }
-a.index-logo-img {
+.index-logo-img {
   position: absolute;
   top: -18px;
   left: 60px;
   height: 35px;
   width: 164px;
-  background: url("../img/logo.svg") 50% 50% no-repeat;
 }
 .header-userblock {
   float: left;
@@ -725,6 +724,10 @@ main {
   cursor: pointer;
   filter: grayscale(0);
   opacity: 1;
+}
+.map {
+  display: inline-block;
+  border-bottom: 70px;
 }
 .main-info-column {
   float: left;
