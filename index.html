@@ -258,9 +258,9 @@
         <div class="main-info-column column-contacts">
           <b class="main-info-title">Контакты</b>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-          <figure>
-            <img src="img/map.png" width="560" height="222" alt="Карта">
-          </figure>
+          <a href="#" class="js-open-map">
+            <img class="js-open-map" src="img/map.png" width="560" height="222" alt="Карта">
+          </a>
           <div class="btn"><a href="#">Напишите нам</a></div>
         </div>
     </div>
@@ -353,5 +353,95 @@
       </section>
     </div>
   </footer>
+  <div class="wrap-form-login">
+  <section class="form-login">
+    <button class="form-login-close" type="button" title="Закрыть">Закрыть</button>
+    <form action="#" method="post">
+      <div class="form-login-wrap">
+        <label for="username">Ваше имя:</label>
+        <input type="text" id="username" name="login" placeholder="Представьтесь, пожалуйста" required>
+      </div>
+      <div class="form-login-wrap">
+      <label for="email">Ваше e-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
+      </div>
+      <p>Текст письма:</p>
+      <textarea name="message">В свободной форме</textarea>
+      <input class="btn input-btn" type="submit" value="Отправить">
+    </form>
+  </section>
+  </div>
+  <div class="wrap-form-map">
+  <section class="form-map">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779985!2d37.527429316262506!3d55.6870309805358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1494603832546" width="960" height="554" frameborder="0" style="border:0" allowfullscreen></iframe>
+     <button class="form-login-close" type="button" title="Закрыть">Закрыть</button>
+  </section>
+  </div>
+  <script>
+    var link = document.querySelector(".login");
+    var popup = document.querySelector(".wrap-form-login");
+    var close = popup.querySelector(".form-login-close");
+    var form = popup.querySelector("form");
+    var login = popup.querySelector("[name=login]");
+    var password = popup.querySelector("[name=email]");
+    var storage = localStorage.getItem("login");
+    link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("wrap-form-login-show");
+        if (storage) {
+          login.value = storage;
+          email.focus();
+        } else {
+          login.focus();
+        }
+      });
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("wrap-form-login-show");
+        popup.classList.remove("wrap-form-login-error");
+      });
+      form.addEventListener("submit", function(event) {
+        if (!login.value || !email.value) {
+          event.preventDefault();
+          popup.classList.remove("wrap-form-login-error");
+          popup.offsetWidth = popup.offsetWidth;
+          popup.classList.add("wrap-form-login-error");
+          console.log("Нужно ввести логин и почту"); 
+        } else {
+          localStorage.setItem("login", login.value);
+        }
+      });
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("wrap-form-login-show")) {
+            popup.classList.remove("wrap-form-login-show");
+            popup.classList.remove("wrap-form-login-error");
+          }
+        }
+      });
+      
+      var mapOpen = document.querySelector(".js-open-map");
+
+      var mapPopup = document.querySelector(".wrap-form-map");
+      var mapClose = mapPopup.querySelector(".form-login-close");
+    
+      mapOpen.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.add("wrap-form-login-show");
+      });
+
+      mapClose.addEventListener("click", function(event) {
+        event.preventDefault();
+        mapPopup.classList.remove("wrap-form-login-show");
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (mapPopup.classList.contains("wrap-form-login-show")) {
+            mapPopup.classList.remove("wrap-form-login-show");
+          }
+        }
+      });
+  </script>
 </body>
 </html>

@@ -31,6 +31,7 @@ body {
 }
 body {
   position: relative;
+  min-width: 1160px;
 }
 .container {
   min-width: 750px;
@@ -1462,9 +1463,190 @@ footer {
 }
 .form-login {
   position: fixed;
-  width: 100px;
-  height: 100px;
+  top: 100px;
+  left: 50%;
+  right: 50%;
+  width: 760px;
+  height: 354px;
+  padding: 100px;
+  margin-left: -480px;
+  z-index: 100;
+  background: #fff;
+  box-shadow:
+   0 1px 4px rgba(0, 0, 0, .3),
+   -23px 0 50px -23px rgba(0, 0, 0, .8),
+   23px 0 50px -23px rgba(0, 0, 0, .8);
 }
+.form-login-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 54px;
+  height: 54px;
+  background-color: rgba(240, 197, 46, .5);
+  border-radius: 50%;
+  border: 0;
+  font-size: 0;
+}
+.form-login-close::after,
+.form-login-close::before {
+  position: absolute;
+  top: 25px;
+  right: 12px;
+  content: '';
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+}
+.form-login-close::after {
+  transform: rotate(-45deg);
+}
+.form-login-close::before {
+  transform: rotate(45deg);
+}
+.form-login-wrap {
+  display: inline-block;
+}
+.form-login label,
+.form-login p {
+  font-size: 18px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  line-height: 18px;
+}
+.form-login input[type="text"],
+.form-login input[type="email"],
+.form-login textarea {
+  display: block;
+  font-size: 14px;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 18px;
+  font-weight: normal;
+  color: #464646;
+  padding: 12px 21px;
+  margin-top: 13px;
+}
+.form-login input[type="text"],
+.form-login input[type="email"] {
+  width: 312px;
+  margin-bottom: 19px;
+}
+.form-login input[type="text"] {
+  margin-right: 40px;
+}
+.form-login textarea {
+  width: 716px;
+  height: 132px;
+  margin-bottom: 45px;
+  opacity: .4;
+}
+.wrap-form-login {
+  display: none;
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background-color: rgba(0, 0, 0, .2);
+}
+.wrap-form-login-show {
+  display: block;
+  animation: login-form .6s;
+}
+.wrap-form-login-error {
+  animation: error .6s;
+}
+@keyframes login-form {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes error {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.form-map {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  right: 50%;
+  width: 960px;
+  height: 554px;
+  margin-left: -480px;
+  z-index: 100;
+  background: #fff;
+  box-shadow:
+   0 1px 4px rgba(0, 0, 0, .3),
+   -23px 0 50px -23px rgba(0, 0, 0, .8),
+   23px 0 50px -23px rgba(0, 0, 0, .8);
+}
+.form-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.wrap-form-map {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
